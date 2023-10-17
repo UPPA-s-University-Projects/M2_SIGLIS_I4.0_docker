@@ -19,5 +19,5 @@ ENV FLASK_RUN_HOST=0.0.0.0
 ENV FLASK_ENV=development 
 EXPOSE 5000  
 
-COPY ./src/micro_services/lab3/lab 3.2/ /app/micro_services/lab3/lab 3.2/ 
-CMD ["python", "/micro_services/lab2/lab 2.1/esbay/user-ms/app/app.py"]
+COPY ./src/micro_services/lab3/lab3.2/ /app/micro_services/lab3/lab3.2
+CMD ["python", "/micro_services/lab3/lab3.2/esbay/user-ms/app/app.py & /micro_services/lab3/lab3.2/esbay/products-ms/app/app.py"]
