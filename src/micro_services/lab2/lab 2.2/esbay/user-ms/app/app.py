@@ -32,7 +32,7 @@ def post_register():
     user.last_name = last_name
     user.password = password
     user.auth = True
-    user.active = True
+    #user.active = True
 
     models.db.session.add(user)
     models.db.sessions.commit()
