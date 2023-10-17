@@ -1,6 +1,6 @@
 FROM python:3.7-alpine  
 
-COPY ./src/requirements.txt ./requirements.txt  
+COPY ./requirements.txt ./requirements.txt  
 WORKDIR ./  
 
 RUN apk add --no-cache --update \
@@ -19,5 +19,5 @@ ENV FLASK_RUN_HOST=0.0.0.0
 ENV FLASK_ENV=development 
 EXPOSE 5000  
 
-COPY ./src /app 
-CMD ["python", "/micro_services/lab1/esbay/user-ms/app/app.py"]
+COPY ./src/micro_services/lab3/lab 3.1 /app/micro_services/lab3/lab 3.1/ 
+CMD ["python", "/micro_services/lab3/lab 3.1/esbay/user-ms/app/app.py & /micro_services/lab3/lab 3.1/esbay/products-ms/app/app.py"]
