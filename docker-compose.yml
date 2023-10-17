@@ -8,9 +8,53 @@ networks:
     driver: bridge
 
 services:
-  user:
+  ms-l1:
     build:
-      context: ./src
+      context: ./src/micro_services/lab1
+    ports:
+      - 8082:5000
+    depends_on:
+      - user_db
+    restart: always
+    networks:
+      - esbay-network
+
+  ms-l21:
+    build:
+      context: ./src/micro_services/lab2/lab2.1
+    ports:
+      - 8082:5000
+    depends_on:
+      - user_db
+    restart: always
+    networks:
+      - esbay-network
+
+  ms-l22:
+    build:
+      context: ./src/micro_services/lab2/lab2.2
+    ports:
+      - 8082:5000
+    depends_on:
+      - user_db
+    restart: always
+    networks:
+      - esbay-network
+
+  ms-l31:
+    build:
+      context: ./src/micro_services/lab3/lab3.1
+    ports:
+      - 8082:5000
+    depends_on:
+      - user_db
+    restart: always
+    networks:
+      - esbay-network
+      
+  ms-l32:
+    build:
+      context: ./src/micro_services/lab3/lab3.2
     ports:
       - 8082:5000
     depends_on:
